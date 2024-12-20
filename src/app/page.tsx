@@ -1,3 +1,5 @@
+import Calendar from '@/components/calendar'
+import { get_courses } from '@/lib/api'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -5,14 +7,11 @@ export const metadata: Metadata = {
 	description: 'This is the home page',
 }
 
-export default function Home() {
+export default async function Home() {
+	const courses = await get_courses()
 	return (
-		<div className='flex flex-col items-center justify-center p-8'>
-			<h1 className='text-4xl font-bold mb-4'>Welcome to My Next.js Test</h1>
-			<p className='text-lg text-gray-600 text-center max-w-md'>
-				This is a simple test project to explore and learn Next.js features and
-				capabilities.
-			</p>
+		<div className='w-full h-full'>
+			<Calendar courses={courses} />
 		</div>
 	)
 }

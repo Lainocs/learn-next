@@ -15,3 +15,11 @@ model User {
   email String  @unique
   name  String?
 }
+
+model Course {
+  id        String   @id @default(uuid())
+  title     String
+  date      DateTime
+  professor String
+  classroom String
+}
