@@ -1,4 +1,4 @@
-import Calendar from '@/components/Calendar'
+import Calendar from '@/components/calendar/Calendar'
 import { get_courses } from '@/lib/api'
 import type { Metadata } from 'next'
 
