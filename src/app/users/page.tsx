@@ -1,4 +1,4 @@
-import { PaginationControls } from '@/components/pagination'
+import { PaginationControls } from '@/components/Pagination'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { COUNT, GET } from './users.action'
