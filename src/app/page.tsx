@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'HomePage',
+	description: 'This is the home page',
+}
+
 export default function Home() {
 	return (
 		<div className='flex flex-col items-center justify-center p-8'>
